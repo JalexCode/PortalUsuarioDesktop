@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>450</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>450</width>
+    <height>450</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>450</width>
+    <height>450</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Acuerdo del usuario</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/icons/icons/politica.png</normaloff>:/icons/icons/politica.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog{
+background-color: rgb(130, 130, 130);
+}</string>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item alignment="Qt::AlignHCenter">
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="image">
+        <property name="minimumSize">
+         <size>
+          <width>50</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>50</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="resources.qrc">:/icons/icons/politica.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="option_lbl">
+        <property name="styleSheet">
+         <string notr="true">font: 18pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>Acuerdo del usuario</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="national_sites_details" native="true">
+     <property name="styleSheet">
+      <string notr="true">QWidget #national_sites_details{
+	border-radius:20px;
+	background-color: rgba(0, 0, 0, 80);
+	padding:20px;
+}
+QLabel{
+	color: white;
+	font: 14pt &quot;Segoe UI&quot;;	
+}
+QCheckBox, QRadioButton{
+	font: 10pt &quot;Segoe UI&quot;;
+	color:white;
+}
+QCheckBox::indicator, QRadioButton::indicator {
+	border: 1px solid rgb(100, 100, 100);
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: rgb(135, 135, 135);
+}
+QCheckBox::indicator:checked, QRadioButton::indicator:checked {
+	border: 1px solid rgb(0, 128, 212);
+	background-color: rgb(0, 221, 255)
+}
+QPushButton{
+	color: white;
+	font: bold 12pt &quot;Segoe UI&quot;;	
+	background-color:rgb(0, 166, 255);
+	border-radius:15px;
+	padding: 10px;
+}
+QPushButton:hover{
+	
+	background-color: rgb(0, 123, 255);
+}</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_13">
+      <item row="0" column="0">
+       <widget class="QTextEdit" name="changelog">
+        <property name="styleSheet">
+         <string notr="true">QAbstractScrollArea
+{
+    border-radius: 10px;
+    /*border: 1px solid #76797C;*/
+    background-color: transparent;
+    color: white;
+	font: 12pt &quot;Segoe UI&quot;;
+}
+
+QScrollBar:horizontal
+{
+    height: 15px;
+    margin: 3px 15px 3px 15px;
+    border: 1px transparent #2A2929;
+    border-radius: 4px;
+    background-color: #2A2929;
+}
+
+QScrollBar::handle:horizontal
+{
+    background-color: #605F5F;
+    min-width: 5px;
+    border-radius: 4px;
+}
+
+QScrollBar::add-line:horizontal
+{
+    margin: 0px 3px 0px 3px;
+    border-image: url(:/qss_icons/rc/right_arrow_disabled.png);
+    width: 10px;
+    height: 10px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:horizontal
+{
+    margin: 0px 3px 0px 3px;
+    border-image: url(:/qss_icons/rc/left_arrow_disabled.png);
+    height: 10px;
+    width: 10px;
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:horizontal:hover,QScrollBar::add-line:horizontal:on
+{
+    border-image: url(:/qss_icons/rc/right_arrow.png);
+    height: 10px;
+    width: 10px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
+
+
+QScrollBar::sub-line:horizontal:hover, QScrollBar::sub-line:horizontal:on
+{
+    border-image: url(:/qss_icons/rc/left_arrow.png);
+    height: 10px;
+    width: 10px;
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::up-arrow:horizontal, QScrollBar::down-arrow:horizontal
+{
+    background: none;
+}
+
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
+{
+    background: none;
+}
+
+QScrollBar:vertical
+{
+    background-color: #2A2929;
+    width: 15px;
+    margin: 15px 3px 15px 3px;
+    border: 1px transparent #2A2929;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:vertical
+{
+    background-color: #605F5F;
+    min-height: 5px;
+    border-radius: 4px;
+}
+
+QScrollBar::sub-line:vertical
+{
+    margin: 3px 0px 3px 0px;
+    border-image: url(:/qss_icons/rc/up_arrow_disabled.png);
+    height: 10px;
+    width: 10px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical
+{
+    margin: 3px 0px 3px 0px;
+    border-image: url(:/qss_icons/rc/down_arrow_disabled.png);
+    height: 10px;
+    width: 10px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical:hover,QScrollBar::sub-line:vertical:on
+{
+
+    border-image: url(:/qss_icons/rc/up_arrow.png);
+    height: 10px;
+    width: 10px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+
+
+QScrollBar::add-line:vertical:hover, QScrollBar::add-line:vertical:on
+{
+    border-image: url(:/qss_icons/rc/down_arrow.png);
+    height: 10px;
+    width: 10px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical
+{
+    background: none;
+}
+
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
+{
+    background: none;
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;¡Gracias por descargar la primera versión de la aplicación Portal Usuario para Windows!&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Antes de empezar a usarlo primero necesitamos que leas lo descrito a continuación y &lt;span style=&quot; font-weight:600;&quot;&gt;decidas si estás de acuerdo o no&lt;/span&gt; con nuestra &lt;span style=&quot; font-weight:600;&quot;&gt;política de privacidad y uso&lt;/span&gt; de la aplicación.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;• &lt;span style=&quot; font-weight:600;&quot;&gt;Portal Usuario para Windows&lt;/span&gt; es una aplicación libre de malwares, sin código malicioso, desarrollada por Javier Alejandro González Casellas. Su fin es facilitar a los usuarios cubanos la accesibilidad a diferentes servicios brindados por Etecsa, así como asistir el manejo de los datos involucrados en dichos servicios.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;• Reconozco la importancia que existe en administrar y proteger correctamente la información de mis usuarios. Por este motivo cuento con esta política de privacidad, la cual describe cómo los servicios prestados a la aplicación &lt;span style=&quot; font-weight:600;&quot;&gt;Portal Usuario para Windows&lt;/span&gt; gestionan y aseguran la información que obtienen.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;• Existe un solo tipo de usuario en &lt;span style=&quot; font-weight:600;&quot;&gt;Portal Usuario para Windows&lt;/span&gt;:&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- &lt;span style=&quot; font-weight:600;&quot;&gt;Usuario&lt;/span&gt;: hace uso total de la aplicación.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;• Los servicios solicitados mediante&lt;span style=&quot; font-weight:600;&quot;&gt; Portal Usuario para Windows&lt;/span&gt;  reciben respuesta de ETECSA, o sea, la aplicación solo los solicita por usted para ahorrarle tiempo y brindarle comodidad. &lt;span style=&quot; font-weight:600;&quot;&gt;No me hago responsable&lt;/span&gt; por demora o mal funcionamiento de los servicios de esta compañía.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;• &lt;span style=&quot; font-weight:600;&quot;&gt;No me hago responsable&lt;/span&gt; del mal uso que le den a la aplicación.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;• Los datos manejados en &lt;span style=&quot; font-weight:600;&quot;&gt;Portal Usuario para Windows&lt;/span&gt;, dígase &lt;span style=&quot; font-weight:600;&quot;&gt;credenciales&lt;/span&gt; (usuarios o contraseñas),&lt;span style=&quot; font-weight:600;&quot;&gt; datos de cuentas&lt;/span&gt; o &lt;span style=&quot; font-weight:600;&quot;&gt;comportamiento del usuario&lt;/span&gt; quedan almacenados en su dispositivo de manera &lt;span style=&quot; font-weight:600;&quot;&gt;encriptada&lt;/span&gt;.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Si has leído hasta aquí y estás de acuerdo con lo planteado, presione el botón &lt;span style=&quot; font-weight:600;&quot;&gt;Aceptar&lt;/span&gt;.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="placeholderText">
+         <string>Esperando conexión a Internet...</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="back2" native="true">
+     <property name="styleSheet">
+      <string notr="true">QWidget #back2{
+	border-radius:20px;
+	background-color: rgba(0, 0, 0, 80);
+	padding:20px;
+}
+QLabel{
+	color: white;
+	font: 14pt &quot;Segoe UI&quot;;	
+}
+QCheckBox, QRadioButton{
+	font: 10pt &quot;Segoe UI&quot;;
+	color:white;
+}
+QCheckBox::indicator, QRadioButton::indicator {
+	border: 1px solid rgb(100, 100, 100);
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: rgb(135, 135, 135);
+}
+QCheckBox::indicator:checked, QRadioButton::indicator:checked {
+	border: 1px solid rgb(0, 128, 212);
+	background-color: rgb(0, 221, 255)
+}
+QPushButton{
+	color: white;
+	font: bold 12pt &quot;Segoe UI&quot;;	
+	background-color:rgb(0, 166, 255);
+	border-radius:15px;
+	padding: 10px;
+}
+QPushButton:hover{
+	
+	background-color: rgb(0, 123, 255);
+}</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QDialogButtonBox" name="buttonBox">
+        <property name="standardButtons">
+         <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+        </property>
+        <property name="centerButtons">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

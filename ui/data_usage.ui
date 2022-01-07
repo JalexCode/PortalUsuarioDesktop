@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>957</width>
+    <height>674</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Calibri</family>
+    <pointsize>12</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Uso de datos</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icons/finance.png</normaloff>icons/finance.png</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="font">
+      <font>
+       <family>Calibri</family>
+       <pointsize>14</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTabWidget{
+    border:none;
+}
+
+QTabWidget:focus{
+    border: none;
+}
+
+QTabWidget::pane {
+    /*border: 1px solid #76797C;*/
+    /*padding: 5px;*/
+    margin: 0px;
+	border-radius: 5px;
+}
+
+QTabWidget::tab-bar {
+    /*left: 5px;*/ /* move to the right by 5px */
+}
+
+/*
+QTabBar
+{
+    qproperty-drawBase: 0;
+    border-radius: 3px;
+}
+
+QTabBar:focus
+{
+    border: none;
+}
+
+QTabBar::close-button  {
+    image: url(:/qss_icons/rc/close.png);
+    background: transparent;
+}
+
+QTabBar::close-button:hover
+{
+    image: url(:/qss_icons/rc/close-hover.png);
+    background: transparent;
+}
+
+QTabBar::close-button:pressed {
+    image: url(:/qss_icons/rc/close-pressed.png);
+    background: transparent;
+}*/
+
+/* TOP TABS */
+QTabBar::tab:top {
+    color: #eff0f1;
+    border: none;/*1px solid #76797C;*/
+   /* border-bottom: 1px transparent black;*/
+    background-color: rgb(255, 170, 0); /*#31363b*/
+    padding: 5px;
+    min-width: 50px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+QTabBar::tab:top:!selected
+{
+    color: #eff0f1;
+    background-color: #54575B;
+    border: 1px solid #76797C;
+    border-bottom: 1px transparent black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;    
+}
+/*
+QTabBar::tab:top:!selected:hover {
+    background-color: #3daee9;
+}
+
+QTabBar QToolButton::right-arrow:enabled {
+     image: url(:/qss_icons/rc/right_arrow.png);
+ }
+
+ QTabBar QToolButton::left-arrow:enabled {
+     image: url(:/qss_icons/rc/left_arrow.png);
+ }
+
+QTabBar QToolButton::right-arrow:disabled {
+     image: url(:/qss_icons/rc/right_arrow_disabled.png);
+ }
+
+ QTabBar QToolButton::left-arrow:disabled {
+     image: url(:/qss_icons/rc/left_arrow_disabled.png);
+ }
+*/</string>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="icon">
+       <iconset>
+        <normaloff>icons/money_control.png</normaloff>icons/money_control.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Estadísticas</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QScrollArea" name="scrollArea_2">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_2">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>939</width>
+            <height>564</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QWidget" name="title_widget" native="true">
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QWidget #title_widget{
+	background-color: rgb(68, 68, 68);
+}</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_3">
+              <item row="0" column="0">
+               <layout class="QGridLayout" name="gridLayout_18">
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label_7">
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="text">
+                   <string>Mostrar</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QComboBox" name="tipo_comportamiento">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>Progreso de gasto</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Progreso de consumo</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item row="1" column="2">
+                 <widget class="QLabel" name="label_8">
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="text">
+                   <string>como</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="3">
+                 <widget class="QComboBox" name="formato_consumo">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>Datos</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Por ciento (%)</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_6">
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="text">
+                   <string>Fecha</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1" colspan="3">
+                 <widget class="QDateEdit" name="fecha_consumo">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                  <property name="buttonSymbols">
+                   <enum>QAbstractSpinBox::NoButtons</enum>
+                  </property>
+                  <property name="specialValueText">
+                   <string/>
+                  </property>
+                  <property name="accelerated">
+                   <bool>true</bool>
+                  </property>
+                  <property name="displayFormat">
+                   <string>dddd, dd MMMM yyyy</string>
+                  </property>
+                  <property name="calendarPopup">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QTableWidget" name="data_usage_table">
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <property name="sizeAdjustPolicy">
+              <enum>QAbstractScrollArea::AdjustToContents</enum>
+             </property>
+             <property name="editTriggers">
+              <set>QAbstractItemView::NoEditTriggers</set>
+             </property>
+             <property name="alternatingRowColors">
+              <bool>true</bool>
+             </property>
+             <property name="textElideMode">
+              <enum>Qt::ElideMiddle</enum>
+             </property>
+             <property name="showGrid">
+              <bool>true</bool>
+             </property>
+             <property name="gridStyle">
+              <enum>Qt::SolidLine</enum>
+             </property>
+             <attribute name="horizontalHeaderCascadingSectionResizes">
+              <bool>true</bool>
+             </attribute>
+             <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="horizontalHeaderStretchLastSection">
+              <bool>true</bool>
+             </attribute>
+             <attribute name="verticalHeaderCascadingSectionResizes">
+              <bool>true</bool>
+             </attribute>
+             <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="verticalHeaderStretchLastSection">
+              <bool>false</bool>
+             </attribute>
+             <row>
+              <property name="text">
+               <string>Hoy</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../img/Emoji Objects-104.png</normaloff>../img/Emoji Objects-104.png</iconset>
+              </property>
+             </row>
+             <column>
+              <property name="text">
+               <string>Internacionales</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../img/Emoji Natur-101.png</normaloff>../img/Emoji Natur-101.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>LTE (solo 4G)</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../img/Emoji Symbols-51.png</normaloff>../img/Emoji Symbols-51.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Bono LTE</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../img/lte_bono.png</normaloff>../img/lte_bono.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Bono de datos</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../img/Emoji Symbols-104.png</normaloff>../img/Emoji Symbols-104.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Bolsa Diaria</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../img/Emoji Natur-106.png</normaloff>../img/Emoji Natur-106.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Nacionales</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../img/1f1e8-1f1fa.png</normaloff>../img/1f1e8-1f1fa.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Bolsa Correo</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../img/Emoji Objects-86.png</normaloff>../img/Emoji Objects-86.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Saldo</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../img/Emoji Objects-78.png</normaloff>../img/Emoji Objects-78.png</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Bono</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../img/Emoji Objects-80.png</normaloff>../img/Emoji Objects-80.png</iconset>
+              </property>
+             </column>
+             <item row="0" column="0">
+              <property name="text">
+               <string>0 MB</string>
+              </property>
+              <property name="textAlignment">
+               <set>AlignCenter</set>
+              </property>
+             </item>
+             <item row="0" column="1">
+              <property name="text">
+               <string>0 MB</string>
+              </property>
+              <property name="textAlignment">
+               <set>AlignCenter</set>
+              </property>
+             </item>
+             <item row="0" column="2">
+              <property name="text">
+               <string>0 MB</string>
+              </property>
+              <property name="textAlignment">
+               <set>AlignCenter</set>
+              </property>
+             </item>
+             <item row="0" column="3">
+              <property name="text">
+               <string>0 MB</string>
+              </property>
+              <property name="textAlignment">
+               <set>AlignCenter</set>
+              </property>
+             </item>
+             <item row="0" column="4">
+              <property name="text">
+               <string>0 MB</string>
+              </property>
+              <property name="textAlignment">
+               <set>AlignCenter</set>
+              </property>
+             </item>
+             <item row="0" column="5">
+              <property name="text">
+               <string>0 MB</string>
+              </property>
+              <property name="textAlignment">
+               <set>AlignCenter</set>
+              </property>
+             </item>
+             <item row="0" column="6">
+              <property name="text">
+               <string>0 MB</string>
+              </property>
+              <property name="textAlignment">
+               <set>AlignCenter</set>
+              </property>
+             </item>
+             <item row="0" column="7">
+              <property name="text">
+               <string>0 MB</string>
+              </property>
+              <property name="textAlignment">
+               <set>AlignCenter</set>
+              </property>
+             </item>
+             <item row="0" column="8">
+              <property name="text">
+               <string>0 MB</string>
+              </property>
+              <property name="textAlignment">
+               <set>AlignCenter</set>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QPlainTextEdit" name="detailed_info">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>80</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Courier</family>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(15, 15, 15);
+color: rgb(59, 255, 0);</string>
+             </property>
+             <property name="plainText">
+              <string>TuCubacel Watchtower
+====================
+* Seleccione un elemento en la tabla para mostrar detalles ;)</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="icon">
+       <iconset>
+        <normaloff>icons/moneytab (2).png</normaloff>icons/moneytab (2).png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Gráfico</string>
+      </attribute>
+      <layout class="QGridLayout" name="graphic_layout">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QWidget" name="graphic_widget" native="true"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QWidget" name="widget_10" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(68, 68, 68);/*rgb(77, 77, 127);*/</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_19">
+      <item row="0" column="2">
+       <widget class="QPushButton" name="btn_maximize">
+        <property name="minimumSize">
+         <size>
+          <width>16</width>
+          <height>16</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>17</width>
+          <height>17</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Maximizar</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	border: none;
+	border-radius: 8px;	
+	background-color: rgb(85, 255, 127);
+}
+QPushButton:hover {	
+	background-color: rgba(85, 255, 127, 150);
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QPushButton" name="btn_minimize">
+        <property name="minimumSize">
+         <size>
+          <width>16</width>
+          <height>16</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>17</width>
+          <height>17</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Minimizar</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	border: none;
+	border-radius: 8px;		
+	background-color: rgb(255, 170, 0);
+}
+QPushButton:hover {	
+	background-color: rgba(255, 170, 0, 150);
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_11">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>images/cubacel.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QPushButton" name="btn_close">
+        <property name="minimumSize">
+         <size>
+          <width>16</width>
+          <height>16</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>17</width>
+          <height>17</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Cerrar</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	border: none;
+	border-radius: 8px;		
+	background-color: rgb(255, 0, 0);
+}
+QPushButton:hover {		
+	background-color: rgba(255, 0, 0, 150);
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>605</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

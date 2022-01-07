@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>651</width>
+    <height>564</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Calibri</family>
+    <pointsize>12</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Registro de compras</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icons/actionlauncher.png</normaloff>icons/actionlauncher.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog{
+	background-color: rgb(203, 203, 203);
+}
+
+QComboBox
+{
+	color: rgb(0, 0, 0);
+	font: 12pt &quot;Calibri&quot;;
+    /*selection-background-color: #3daee9;*/
+    border-radius:12px;
+    border:none;
+    padding-left: 10px;
+    padding-right: 10px;
+    selection-background-color: rgb(62, 62, 62);
+    min-width: 75px;
+}
+
+QComboBox:drop-down {
+	color: white;
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 12px;
+    border:none;
+    border-radius:10px;
+    background-color: transparent;
+}
+
+QComboBox:down-arrow {
+    image: url('ui/graphics/arrow_down.png');
+    height: 12px;
+    width: 12px;
+    padding-right: 10px;
+}
+
+QComboBox:on:hover:focus {
+    image: url('ui/graphics/arrow_down_disabled.png');
+}
+
+QComboBox QAbstractItemView
+{
+	color: white;
+    background-color: #232629;
+    border-radius: 10px;
+    border: none;
+    selection-background-color: #18465d;
+}
+/* DATE PICKER */
+QDateEdit
+{
+	color: rgb(0, 0, 0);
+	border-radius:12px;
+	border:none;
+	padding-left: 10px;
+	padding-right: 10px;
+	selection-background-color: #3daee9;
+}
+
+QDateEdit::down-arrow
+{
+    image: url('ui/graphics/arrow_down.png');
+    height: 12px;
+    width: 12px;
+    padding-right: 10px;
+}
+
+QDateEdit:on
+{
+    padding-top: 3px;
+    padding-left: 4px;
+    selection-background-color: #4a4a4a;
+}
+
+QDateEdit QAbstractItemView
+{
+	
+	color:rgb(181, 181, 181);
+    background-color: #232629;
+    border-radius: 5px;
+    border: 1px solid #3375A3;
+    selection-background-color: #3daee9;
+}
+
+QDateEdit::drop-down
+{
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+    /*border-left-width: 0px;
+    border-left-color: darkgray;
+    border-left-style: solid;*/
+    border-radius: 10px;
+}
+
+QDateEdit::down-arrow:on, QDateEdit::down-arrow:hover,
+QDateEdit::down-arrow:focus
+{
+    image: url('ui/graphics/arrow_down.png');
+    height: 12px;
+    width: 12px;
+    padding-right: 10px;
+}</string>
+  </property>
+  <property name="modal">
+   <bool>false</bool>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_4">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <property name="verticalSpacing">
+    <number>0</number>
+   </property>
+   <item row="3" column="0">
+    <widget class="QTableWidget" name="table">
+     <property name="styleSheet">
+      <string notr="true">QTableView
+{
+	color:white;
+    border: none;/*1px solid #76797C;*/
+    gridline-color: #31363b;
+    background-color: #232629;
+}
+
+
+QTableView, QHeaderView
+{
+    border-radius: 10px;
+}
+
+QTableView::item:pressed, QListView::item:pressed, QTreeView::item:pressed  {
+    background: #18465d;
+    color: #eff0f1;
+}
+
+QTableView::item:selected:active, QTreeView::item:selected:active, QListView::item:selected:active  {
+    background: #287399;
+    color: #eff0f1;
+}
+
+
+QHeaderView
+{
+    background-color: #31363b;
+    border: none;/*1px transparent;*/
+    border-radius: 10px;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+QHeaderView::section  {
+    background-color: #31363b;
+    color: #eff0f1;
+    padding: 5px;
+	 border: none;/*1px solid #76797C;*/
+    border-radius: 10px;
+    text-align: center;
+}
+
+QHeaderView::section::vertical::first, QHeaderView::section::vertical::only-one
+{
+    border-top: 1px solid #76797C;
+}
+
+QHeaderView::section::vertical
+{
+    border-top: transparent;
+}
+
+QHeaderView::section::horizontal::first, QHeaderView::section::horizontal::only-one
+{
+    border-left: 1px solid #76797C;
+}
+
+QHeaderView::section::horizontal
+{
+    border-left: transparent;
+}
+
+
+QHeaderView::section:checked
+ {
+    color: white;
+    background-color: #334e5e;
+ }
+
+ /* style the sort indicator */
+QHeaderView::down-arrow {
+    image: url(:/qss_icons/rc/down_arrow.png);
+}
+
+QHeaderView::up-arrow {
+    image: url(:/qss_icons/rc/up_arrow.png);
+}
+
+
+QTableCornerButton::section {
+    background-color: transparent;/*#31363b;*/
+    border: none;/*1px transparent #76797C;*/
+    border-radius: 10px;
+}</string>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="textElideMode">
+      <enum>Qt::ElideMiddle</enum>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="verticalHeaderStretchLastSection">
+      <bool>false</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>Fecha</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Número de teléfono</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Origen</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Paquete</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Precio</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="0" column="0" alignment="Qt::AlignVCenter">
+    <widget class="QWidget" name="widget" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget{
+font: 12pt &quot;Calibri&quot;;
+color: rgb(255, 255, 255);
+}
+
+QWidget #widget{
+	background-color: rgb(68, 68, 68);
+}</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_5">
+      <item row="1" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Fecha Inicio:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Fecha Final:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Origen</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Paquete</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QDateEdit" name="init_day">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="buttonSymbols">
+         <enum>QAbstractSpinBox::NoButtons</enum>
+        </property>
+        <property name="calendarPopup">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QDateEdit" name="final_date">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="frame">
+         <bool>false</bool>
+        </property>
+        <property name="buttonSymbols">
+         <enum>QAbstractSpinBox::NoButtons</enum>
+        </property>
+        <property name="calendarPopup">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QComboBox" name="origins_list">
+        <property name="minimumSize">
+         <size>
+          <width>95</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: grey;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QComboBox" name="data_package_list">
+        <property name="minimumSize">
+         <size>
+          <width>95</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: grey;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="4">
+       <widget class="QPushButton" name="send">
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Enviar solicitud</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	
+	font: bold 12pt &quot;Calibri&quot;;
+	color:rgba(0, 0, 0, 100);
+	border-radius: 10px;
+	padding: 5px;
+	background-color: rgb(190, 174, 255);
+}
+
+QPushButton:hover{
+	color:rgba(255, 255, 255, 100);
+	background-color:rgb(82, 62, 106);
+}</string>
+        </property>
+        <property name="text">
+         <string>Enviar</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" colspan="5">
+       <widget class="QWidget" name="widget_4" native="true">
+        <layout class="QGridLayout" name="gridLayout">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item row="0" column="2">
+          <widget class="QPushButton" name="btn_minimize">
+           <property name="minimumSize">
+            <size>
+             <width>16</width>
+             <height>16</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>17</width>
+             <height>17</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>Minimizar</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	border: none;
+	border-radius: 8px;		
+	background-color: rgb(255, 170, 0);
+}
+QPushButton:hover {	
+	background-color: rgba(255, 170, 0, 150);
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QPushButton" name="btn_close">
+           <property name="minimumSize">
+            <size>
+             <width>16</width>
+             <height>16</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>17</width>
+             <height>17</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>Cerrar</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	border: none;
+	border-radius: 8px;		
+	background-color: rgb(255, 0, 0);
+}
+QPushButton:hover {		
+	background-color: rgba(255, 0, 0, 150);
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_8">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>images/cubacel.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QWidget" name="widget_3" native="true">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="0" alignment="Qt::AlignHCenter">
+       <widget class="QWidget" name="widget_2" native="true">
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_5">
+           <property name="font">
+            <font>
+             <family>Calibri</family>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Mostrar</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="label_6">
+           <property name="font">
+            <font>
+             <family>Calibri</family>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>resultados</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QComboBox" name="results">
+           <property name="minimumSize">
+            <size>
+             <width>95</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>20</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(156, 156, 156);
+/*padding-right: 20px;
+padding-left: 20px;*/</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>10</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>25</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>50</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>100</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QWidget" name="widget_5" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-radius:12px;
+border:none;
+background-color: rgb(255, 255, 255);</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_6">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <property name="horizontalSpacing">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_7">
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Calibri</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>icons/search_black.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="search_by">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Calibri</family>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius:12px;
+border:none;
+padding-left: 10px;
+padding-right: 10px;</string>
+           </property>
+           <property name="placeholderText">
+            <string>Escriba un criterio de busqueda</string>
+           </property>
+           <property name="clearButtonEnabled">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btn_close</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>Dialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>719</x>
+     <y>29</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>746</x>
+     <y>31</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

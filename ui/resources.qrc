@@ -1,0 +1,160 @@
+<RCC>
+  <qresource prefix="images">
+    <file>images/designs.png</file>
+    <file>images/xgames5.png</file>
+    <file>images/screenshots/cogle.png</file>
+    <file>images/screenshots/frees3.png</file>
+    <file>images/screenshots/micubacel.png</file>
+    <file>images/screenshots/xgames.png</file>
+    <file>images/etecsa_white.png</file>
+    <file>images/cubacel.png</file>
+    <file>images/jalex.png</file>
+    <file>images/pamarillas.png</file>
+    <file>images/etecsa.png</file>
+    <file>images/nauta.png</file>
+  </qresource>
+  <qresource prefix="bg">
+    <file>images/bg1.png</file>
+    <file>images/bg2.png</file>
+    <file>images/bg3.png</file>
+    <file>images/bg4.png</file>
+  </qresource>
+  <qresource prefix="logo">
+    <file>logo/splash_portal_usuario.png</file>
+    <file>logo/portal.png</file>
+  </qresource>
+  <qresource prefix="icons">
+    <file>icons/@WindowsUpdateToastIcon.contrast-blacka.png</file>
+    <file>icons/1x/androidAsset 49.png</file>
+    <file>icons/1x/arrow.png</file>
+    <file>icons/1x/bookAsset 57.png</file>
+    <file>icons/1x/bugAsset 47.png</file>
+    <file>icons/1x/bulletAsset 54.png</file>
+    <file>icons/1x/cleanAsset 59.png</file>
+    <file>icons/1x/closeAsset 43.png</file>
+    <file>icons/1x/cloudAsset 48.png</file>
+    <file>icons/1x/dragAsset 52.png</file>
+    <file>icons/1x/errorAsset 55.png</file>
+    <file>icons/1x/gameAsset 61.png</file>
+    <file>icons/1x/hideAsset 53.png</file>
+    <file>icons/1x/homeAsset 46.png</file>
+    <file>icons/1x/logo.png</file>
+    <file>icons/1x/max.png</file>
+    <file>icons/1x/peopleAsset 62.png</file>
+    <file>icons/1x/peple.png</file>
+    <file>icons/1x/restore.png</file>
+    <file>icons/1x/settAsset 50.png</file>
+    <file>icons/1x/smile2Asset 1.png</file>
+    <file>icons/1x/smileAsset 1.png</file>
+    <file>icons/1x/windAsset 51.png</file>
+    <file>icons/1x/worldAsset 60.png</file>
+    <file>icons/ic_code_scanner_auto_focus_on.png</file>
+    <file>icons/ic_security.png</file>
+    <file>icons/baseline_account_circle_black_48.png</file>
+    <file>icons/bonos1.png</file>
+    <file>icons/califi.png</file>
+    <file>icons/emergencia1.png</file>
+    <file>icons/medidor.png</file>
+    <file>icons/paginas_amarillas.png</file>
+    <file>icons/playstore.png</file>
+    <file>icons/politica.png</file>
+    <file>icons/saldo1.png</file>
+    <file>icons/version2.png</file>
+    <file>icons/web_apklis.png</file>
+    <file>icons/web1.png</file>
+    <file>icons/wifietecsa.png</file>
+    <file>icons/stat_sys_phone_call.png</file>
+    <file>icons/home.png</file>
+    <file>icons/back_black.png</file>
+    <file>icons/back_white.png</file>
+    <file>icons/back.png</file>
+    <file>icons/LinkedInboxBadge.scale-400.png</file>
+    <file>icons/NewsAppList.targetsize-256_altform-lightunplated_contrast-black.png</file>
+    <file>icons/stat_sys_phone_call.png</file>
+    <file>icons/@WindowsUpdateToastIcon.contrast-black.png</file>
+    <file>icons/@WindowsUpdateToastIcon.png</file>
+    <file>icons/Aplicaciones_y_juegos_cubanos.png</file>
+    <file>icons/search_white.png</file>
+    <file>icons/1f1e8-1f1fa.png</file>
+    <file>icons/4014683-3g-internet-phone-wifi_112899.png</file>
+    <file>icons/4014699-3g-carrier-connection-data-mobile_112909.png</file>
+    <file>icons/actionlauncher.png</file>
+    <file>icons/androidhub.png</file>
+    <file>icons/anydo (2).png</file>
+    <file>icons/authentication.png</file>
+    <file>icons/available_network.png</file>
+    <file>icons/cheddar.png</file>
+    <file>icons/clock2.png</file>
+    <file>icons/clock5.png</file>
+    <file>icons/controlcenter.png</file>
+    <file>icons/critical.png</file>
+    <file>icons/darkstyle.css</file>
+    <file>icons/develop.png</file>
+    <file>icons/documents.png</file>
+    <file>icons/documentstgo.png</file>
+    <file>icons/downloadallfiles.png</file>
+    <file>icons/downloader_sound_cloud.png</file>
+    <file>icons/email.png</file>
+    <file>icons/extendedcontrols.png</file>
+    <file>icons/eye_black.png</file>
+    <file>icons/eye_white.png</file>
+    <file>icons/facebook (2).png</file>
+    <file>icons/feedly (2).png</file>
+    <file>icons/filemanager_cm.png</file>
+    <file>icons/finance.png</file>
+    <file>icons/flashify.png</file>
+    <file>icons/folderdownloader (2).png</file>
+    <file>icons/folderdownloader.png</file>
+    <file>icons/gallery (2).png</file>
+    <file>icons/gmail.png</file>
+    <file>icons/google_calendar_4.png</file>
+    <file>icons/gravity_box.png</file>
+    <file>icons/htc_updater.png</file>
+    <file>icons/htctasks.png</file>
+    <file>icons/ic_user_secure.png</file>
+    <file>icons/icono.fla</file>
+    <file>icons/icono.png</file>
+    <file>icons/icono128.png</file>
+    <file>icons/info.png</file>
+    <file>icons/internetspeedmeter.png</file>
+    <file>icons/knox.png</file>
+    <file>icons/lil_back.png</file>
+    <file>icons/lil_forward.png</file>
+    <file>icons/login.png</file>
+    <file>icons/logmein2.png</file>
+    <file>icons/logo2.png</file>
+    <file>icons/logout.png</file>
+    <file>icons/lte.png</file>
+    <file>icons/money_control.png</file>
+    <file>icons/moneymanager.png</file>
+    <file>icons/moneytab (2).png</file>
+    <file>icons/moneytab.png</file>
+    <file>icons/moneywise.png</file>
+    <file>icons/msecure.png</file>
+    <file>icons/mypaidapps.png</file>
+    <file>icons/navyfederal.png</file>
+    <file>icons/pngwing.com.png</file>
+    <file>icons/rar_android.png</file>
+    <file>icons/resources.qrc</file>
+    <file>icons/screen_off.png</file>
+    <file>icons/search.png</file>
+    <file>icons/search_black.png</file>
+    <file>icons/seriesguide.png</file>
+    <file>icons/settings.png</file>
+    <file>icons/speed.png</file>
+    <file>icons/speedtest.png</file>
+    <file>icons/stopwatch.png</file>
+    <file>icons/success_green.png</file>
+    <file>icons/taskstodo.png</file>
+    <file>icons/telegram.png</file>
+    <file>icons/time.png</file>
+    <file>icons/twitter.png</file>
+    <file>icons/unavailabe_network.png</file>
+    <file>icons/videos.png</file>
+    <file>icons/warning_QR.png</file>
+    <file>icons/warning48x48.png</file>
+    <file>icons/watch.png</file>
+    <file>icons/weather_swan.png</file>
+    <file>icons/wifi_file_explorer.png</file>
+  </qresource>
+</RCC>
